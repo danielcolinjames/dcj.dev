@@ -5,9 +5,21 @@ import './App.css';
 // import Header from './Components/Header';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
+import ProjectPage from './Pages/ProjectPage';
+
+import abacusImg from './images/abacus.png';
+import googleCollapseImg from './images/googlecollapse.png';
+import meshImg from './images/mesh.png';
+import luxxImg from './images/luxx.png';
+
 import ScrollToTop from './Components/ScrollToTop';
 
 class App extends Component {
+  // if we want to change the background of body later
+  // componentWillMount () {
+  //   document.body.style.backgroundColor = '#EFEFEF';
+  // }
+
   render() {
     return (
       <BrowserRouter>

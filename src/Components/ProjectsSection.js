@@ -16,15 +16,35 @@ const ProjectsBackgroundContainer = styled.div`
 
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-gap: 3em;
 
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
     @media (max-width: 700px) {
-        
+        margin-top: 40px;
+        margin-bottom: 40px;
+        grid-template-rows: auto;
+        grid-gap: 3em;
     }
 `;
+
+const SectionIntroText = styled.p`
+    font-family: 'Europa-Light';
+    font-size: 1.1em;
+    color: #666;
+
+    align-self: center;
+    justify-self: center;
+
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 700px) {
+        margin: 0 50px 0 50px;
+    }
+`
 
 const ProjectCardContainer = styled(NavLink)`
 
@@ -33,10 +53,14 @@ const ProjectCardContainer = styled(NavLink)`
     min-height: 200px;
     height: auto;
 
-    justify-self: center;
-    align-self: center;
+    border: 5px solid ${props => props.bgc};
 
-    background-color: ${props => props.backgroundColour};
+    /* box-shadow: 0 6px 20px 0 rgba(39,52,89,.1); */
+
+    justify-self: center;
+    align-self: start;
+
+    background-color: ${props => props.bgc};
 
     border-radius: 35px;
 
@@ -80,34 +104,32 @@ const ProjectCardTextContainer = styled.div`
     justify-self: start;
 `
 
-const ProjectCardTitle = styled.h1`
-
-    font-size: 30px;
+const ProjectCardTitle = styled.h2`
+    font-size: 2em;
     font-family: "Europa-Bold";
-    color: #222;
+    color: #4B4B4B;
 
     /* align-self: start; */
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
 `
 
-const ProjectCardSubtitle = styled.h2`
-
-    font-size: 25px;
+const ProjectCardSubtitle = styled.h3`
+    font-size: 1.7em;
     font-family: "Europa-Regular";
-    color: #555;
+    color: #666;
 
     /* align-self: start; */
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
 `
 
 const ProjectCardBody = styled.p`
-
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: "Europa-Light";
     color: #777;
 
     /* align-self: start; */
     margin: 0 0 5px 0;
+
 `
 
 const ProjectCardImage = styled.img.attrs({
@@ -126,6 +148,7 @@ const ProjectCardImage = styled.img.attrs({
 
     @media (max-width: 700px) {
         margin: 0 30px 30px 30px;
+        justify-self: start;
     }
 `
 
@@ -133,7 +156,11 @@ const ProjectCardImage = styled.img.attrs({
 export default () => {
     return (
         <ProjectsBackgroundContainer bgc="white">
-            <ProjectCardContainer backgroundColour="#FFEB7Caa" to="/abacus">
+            <SectionIntroText>
+                Here are a few of my favourite projects I've worked on so far:
+            </SectionIntroText>
+
+            <ProjectCardContainer bgc="#FFEB7Caa" to="/abacus">
 
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>Abacus</ProjectCardTitle>
@@ -145,7 +172,7 @@ export default () => {
 
             </ProjectCardContainer>
 
-            <ProjectCardContainer backgroundColour="#A5FFD2aa"  to="/googlecollapse">
+            <ProjectCardContainer bgc="#A5FFD2aa" to="/how-google-collapsed">
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>How Google Collapsed</ProjectCardTitle>
                     <ProjectCardSubtitle>Medium Article</ProjectCardSubtitle>
@@ -156,7 +183,7 @@ export default () => {
 
             </ProjectCardContainer>
 
-            <ProjectCardContainer backgroundColour="#A5D2FFaa"  to="/mesh">
+            <ProjectCardContainer bgc="#A5D2FFaa" to="/mesh">
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>Mesh</ProjectCardTitle>
                     <ProjectCardSubtitle>Live Data Visualization and Mobile App</ProjectCardSubtitle>
@@ -167,7 +194,7 @@ export default () => {
 
             </ProjectCardContainer>
 
-            <ProjectCardContainer backgroundColour="#FFA5A5aa"  to="/luxx">
+            <ProjectCardContainer bgc="#FFA5A5aa" to="/luxx">
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>LUXX</ProjectCardTitle>
                     <ProjectCardSubtitle>Wearable Technology Multiplayer Game</ProjectCardSubtitle>
