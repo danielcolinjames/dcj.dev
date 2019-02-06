@@ -4,9 +4,11 @@
   "private": true,
   "homepage": "https://danielcolinjames.github.io/portfolio-site-react",
   "dependencies": {
+    "@u-wave/react-vimeo": "^0.6.0",
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-meta-tags": "^0.7.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "styled-components": "^3.4.10"
