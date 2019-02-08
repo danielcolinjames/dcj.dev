@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import MetaTags from 'react-meta-tags';
 
 import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 import IntroSection from '../Components/IntroSection';
 import ProjectsSection from '../Components/ProjectsSection';
 import HighlightsSection from '../Components/HighlightsSection';
@@ -14,10 +15,17 @@ export default (props) => {
                 <title>Daniel Colin James</title>
                 <meta name="theme-color" content="#EFEFEF"/>
             </MetaTags>
-            <Header background="#EFEFEF"/>
-            <IntroSection />
+            <Header
+                background="#EFEFEF"
+                hoverColour="#DFDFDF"/>
+            <IntroSection
+                bgc="#EFEFEF"
+                emoji="👋"/>
             <ProjectsSection />
-            <HighlightsSection />
+            {/* <HighlightsSection /> */}
+            <Footer 
+                bgColor="#ccc"
+                fgColor="#fff" />
         </Fragment>
     )
 }

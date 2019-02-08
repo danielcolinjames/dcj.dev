@@ -40,7 +40,8 @@ export const IntroTextH1 = styled.h1`
     color: black;
     grid-area: header;
     font-size: 3em;
-    font-family: "Europa-Bold";
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 700;
         
     max-width: 600px;
     text-align: left;
@@ -54,6 +55,7 @@ export const IntroTextH1 = styled.h1`
     @media (max-width: 700px) {
         /* font-size: 2em; */
         margin: 50px 50px 0 50px;
+        font-size: 2.5em;
     }
 
     ${props => props.project && css`
@@ -69,7 +71,8 @@ export const IntroTextH1 = styled.h1`
 export const IntroTextH2 = styled.p`
     grid-area: body;
     font-size: 1.5em;
-    font-family: "Europa-Light";
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     
     max-width: 550px;
     text-align: left;
@@ -83,13 +86,14 @@ export const IntroTextH2 = styled.p`
     /* background-color: red; */
 
     @media (max-width: 700px) {
-        /* font-size: 1.25em; */
+        font-size: 1.4em;
         margin: 10px 40px 10px 50px;
         min-width: 200px;
     }
 
     ${props => props.project && css`
-        font-family: "Europa-Bold";
+        font-family: "Europa", Arial, Helvetica, sans-serif;
+        font-weight: 700;
         font-size: 2em;
         color: #666;
 
@@ -122,7 +126,7 @@ export const IntroPicture = styled.img.attrs({
 
     @media (max-width: 700px) {
         /* max-width: 40%; */
-        max-width: 200px;
+        max-width: 180px;
         /* width: auto; */
         height: auto;
         margin-top: 20px;
@@ -144,15 +148,16 @@ export const IntroPicture = styled.img.attrs({
     `}
 `;
 
-export default () => {
+export default (props) => {
     return (
-        <IntroBackgroundContainer bgc="#EFEFEF">
+        <IntroBackgroundContainer
+            bgc={props.bgc}>
             <IntroPicture
                 imgsrc={picture}
                 alignment='end' />
 
             <IntroTextH1>
-                Hey, I'm Daniel.
+                Hey! {props.emoji} I'm Daniel.
             </IntroTextH1>
             <IntroTextH2>
                 I'm a writer, developer, product manager, and other things. I'm currently working on a bunch of passion projects, and I'm open to new opportunities.

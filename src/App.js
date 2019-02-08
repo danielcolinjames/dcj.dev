@@ -36,13 +36,14 @@ class App extends Component {
                   themeColourLight={'#FFFBE5'}
                   themeColourReal={'#FFF5BD'}
                   themeColour={'#FFEB7Caa'}
+                  themeColourHeader={'#FFEB7Cdd'}
                   themeColourSolid={'#FFEB7C'}
                   themeColourDark={'#E6D46F'}
                   themeColourDarker={'#BFB05D'}
 
                   projectTitle={'Abacus'}
                   projectType={'Cryptocurrency Portfolio Tracker'}
-                  projectOverview={'I developed the front end of the web version of a cryptocurrency portfolio tracker.'}
+                  projectOverview={'I developed the front-end of the web version of a cryptocurrency portfolio tracker.'}
                   projectImgSrc={abacusImg}
                 />}
               />
@@ -52,6 +53,7 @@ class App extends Component {
                   themeColourLight={'#EDFFF6'}
                   themeColourReal={'#D2FFE8'}
                   themeColour={'#A5FFD2aa'}
+                  themeColourHeader={'#A5FFD2dd'}
                   themeColourSolid={'#A5FFD2'}
                   themeColourDark={'#94E6BD'}
                   themeColourDarker={'#7BBF9D'}
@@ -68,13 +70,14 @@ class App extends Component {
                   themeColourLight={'#EDF6FF'}
                   themeColourReal={'#D2E8FF'}
                   themeColour={'#A5D2FFaa'}
+                  themeColourHeader={'#A5D2FFdd'}
                   themeColourSolid={'#A5D2FF'}
                   themeColourDark={'#94BDE6'}
                   themeColourDarker={'#7B9DBF'}
 
                   projectTitle={'Mesh'}
                   projectType={'Live Data Visualization and Mobile App'}
-                  projectOverview={'I developed the front end of a networking app that launched at a 3000+ attendee conference.'}
+                  projectOverview={'I developed the front-end of a networking app that launched at a 3000+ attendee conference.'}
                   projectImgSrc={meshImg}
                 />}
               />
@@ -84,6 +87,7 @@ class App extends Component {
                   themeColourLight={'#FFEDED'}
                   themeColourReal={'#FFD2D2'}
                   themeColour={'#FFA5A5aa'}
+                  themeColourHeader={'#FFA5A5dd'}
                   themeColourSolid={'#FFA5A5'}
                   themeColourDark={'#E69494'}
                   themeColourDarker={'#BF7B7B'}

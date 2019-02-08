@@ -7,12 +7,12 @@ import AboutIcon from '../images/ic_person_24px.png';
 
 const Header = styled.div`
     background: ${props => props.background};
-    height: 50px;
+    height: 60px;
     width: 100%;
     
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -41,7 +41,7 @@ const FirstLinkContainer = styled.div`
 
     @media(max-width: 700px) {
         justify-self: start;
-        padding-left: 50px;
+        padding-left: 30px;
     }
 `;
 
@@ -68,13 +68,15 @@ const LastLinkContainer = styled.div`
 
     @media(max-width: 700px) {
         justify-self: end;
-        padding-right: 50px;
+        padding-right: 30px;
     }
 `;
 
 const HeaderLinkContainer = styled(NavLink)`
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
+    min-height: 40px;
+    min-width: 140px;
     max-width: 150px;
 
     text-decoration: none;
@@ -86,7 +88,10 @@ const HeaderLinkContainer = styled(NavLink)`
     align-items: center;
     justify-content: center;
 
-    
+    margin: 10px;
+
+    border-radius: 5px;
+    /* border: 1px solid */
 
     @media(max-width: 700px) {
         display: flex;
@@ -94,14 +99,28 @@ const HeaderLinkContainer = styled(NavLink)`
         align-items: center;
         justify-content: center;
 
+        min-height: 60px;
+        min-width: 75px;
+
+        margin: 0 0;
+
         /* padding: 10px 50px 10px 50px; */
     }
 
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
+    background-color: none;
 
     :hover {
-        transform: translate(0, -2.5px);
-        /* background-color: #ddd; */
+        /* transform: translate(0, -2.5px); */
+        background-color: ${props => props.hoverColour};
+        transition: background-color 150ms linear;
+    }
+
+    @media (hover: none) {
+        /* on devices that do not have a pointer, don't have hover effects */
+        :hover{
+            transform: none;
+        }
     }
 `;
 
@@ -117,7 +136,8 @@ const HeaderLinkText = styled.p`
     text-decoration: none;
     text-align: left;
     color: #777;
-    font-family: "Europa-Light";
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     font-size: 1em;
     margin: 0 0 0 10px;
 
@@ -132,10 +152,13 @@ const HeaderLinkText = styled.p`
 export default (props) => {
     return (
         <Fragment>
-            <Header background={props.background}>
+            <Header
+                background={props.background}
+                >
                 <FirstLinkContainer>
                     <HeaderLinkContainer
-                        to="/">
+                        to="/"
+                        hoverColour={props.hoverColour}>
 
                         <HeaderLinkIcon
                             imgsrc={HomeIcon}>
@@ -153,7 +176,8 @@ export default (props) => {
 
                 <LastLinkContainer>
                     <HeaderLinkContainer
-                        to="/about">
+                        to="/about"
+                        hoverColour={props.hoverColour}>
 
                         <HeaderLinkIcon
                             imgsrc={AboutIcon}>

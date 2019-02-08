@@ -31,7 +31,8 @@ const ProjectsBackgroundContainer = styled.div`
 `;
 
 const SectionIntroText = styled.p`
-    font-family: 'Europa-Light';
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     font-size: 1.1em;
     color: #666;
 
@@ -53,7 +54,7 @@ const ProjectCardContainer = styled(NavLink)`
     min-height: 200px;
     height: auto;
 
-    border: 5px solid ${props => props.bgc};
+    /* border: 5px solid ${props => props.bgc}; */
 
     /* box-shadow: 0 6px 20px 0 rgba(39,52,89,.1); */
 
@@ -106,7 +107,8 @@ const ProjectCardTextContainer = styled.div`
 
 const ProjectCardTitle = styled.h2`
     font-size: 2em;
-    font-family: "Europa-Bold";
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 700;
     color: #4B4B4B;
 
     /* align-self: start; */
@@ -115,7 +117,8 @@ const ProjectCardTitle = styled.h2`
 
 const ProjectCardSubtitle = styled.h3`
     font-size: 1.7em;
-    font-family: "Europa-Regular";
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 400;
     color: #666;
 
     /* align-self: start; */
@@ -124,7 +127,8 @@ const ProjectCardSubtitle = styled.h3`
 
 const ProjectCardBody = styled.p`
     font-size: 1.25em;
-    font-family: "Europa-Light";
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     color: #777;
 
     /* align-self: start; */
@@ -165,7 +169,7 @@ export default () => {
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>Abacus</ProjectCardTitle>
                     <ProjectCardSubtitle>Cryptocurrency Portfolio Tracker</ProjectCardSubtitle>
-                    <ProjectCardBody>I developed the front end of the web version of a cryptocurrency portfolio tracker.</ProjectCardBody>
+                    <ProjectCardBody>I developed the front-end of the web version of a cryptocurrency portfolio tracker.</ProjectCardBody>
                 </ProjectCardTextContainer>
 
                 <ProjectCardImage imgsrc={abacus}></ProjectCardImage>
@@ -187,7 +191,7 @@ export default () => {
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>Mesh</ProjectCardTitle>
                     <ProjectCardSubtitle>Live Data Visualization and Mobile App</ProjectCardSubtitle>
-                    <ProjectCardBody>I developed the front end of a networking app that launched at a 3000+ attendee conference.</ProjectCardBody>
+                    <ProjectCardBody>I developed the front-end of a networking app that launched at a 3000+ attendee conference.</ProjectCardBody>
                 </ProjectCardTextContainer>
 
                 <ProjectCardImage imgsrc={mesh}></ProjectCardImage>

@@ -31,7 +31,8 @@ const HighlightsBackgroundContainer = styled.div`
 `;
 
 const HighlightsIntroText = styled.p`
-    font-family: 'Europa-Light';
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     font-size: 1.1em;
     color: #666;
 
@@ -144,8 +145,8 @@ const HighlightCardTextContainer = styled.div`
 
 const HighlightCardTitle = styled.h1`
     font-size: 30px;
-    font-family: "Europa-Bold";
-    font-weight: 600;
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 700;
     color: ${props => props.textColour};
 
     text-align: center;
@@ -159,8 +160,8 @@ const HighlightCardTitle = styled.h1`
 
 const HighlightCardSubtitle = styled.h2`
     font-size: 25px;
-    font-family: "Europa-Light";
-    font-weight: 400;
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     color: ${props => props.textColour};
 
     text-align: center;

@@ -6,8 +6,11 @@ import MetaTags from 'react-meta-tags';
 import AbacusContent from '../Pages/AbacusContent';
 import LUXXContent from '../Pages/LUXXContent';
 import GoogleCollapseContent from '../Pages/GoogleCollapseContent';
+import MeshContent from '../Pages/MeshContent';
 import Header from '../Components/Header';
 import styled from 'styled-components';
+
+import Footer from '../Components/Footer';
 
 import { IntroBackgroundContainer, IntroTextH1, IntroTextH2, IntroPicture } from '../Components/IntroSection';
 
@@ -21,7 +24,10 @@ export default (props) => {
                 <meta name="theme-color" content={props.themeColour}/>
             </MetaTags>
             {/* <Header background={props.themeColour}></Header> */}
-            <Header background={props.themeColour}></Header>
+            <Header
+                background={props.themeColourHeader}
+                hoverColour={props.themeColourDark}>
+            </Header>
 
             <IntroBackgroundContainer
                 bgc={props.themeColour}
@@ -50,7 +56,13 @@ export default (props) => {
                     render={() => <GoogleCollapseContent {...props} />}/>
                 <Route path="/luxx"
                     render={() => <LUXXContent {...props} />}/>
+                <Route path="/mesh"
+                    render={() => <MeshContent {...props} />}/>
             </Switch>
+
+            <Footer
+                bgColor={props.themeColour}
+                fgColor={"#fff"} />
         </Fragment>
     )
 }
