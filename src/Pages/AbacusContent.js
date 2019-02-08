@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import React from 'react';
 
 // import luxx from '../images/luxx.png';
@@ -24,8 +24,8 @@ import {
     HeaderTextSeparator,
     HeaderText,
     BodyText,
-    BodyList,
-    BodyListItem,
+    // BodyList,
+    // BodyListItem,
     BodyCalloutText,
     BodyImageContainer,
     BodyImage,
@@ -125,7 +125,7 @@ export default (props) => {
                 <BodyText>
                     This page is under construction, and I'm actively updating this story to be more cohesive.
                 </BodyText>
-                
+
 
 
                 <HeaderText>

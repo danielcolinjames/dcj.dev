@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import React from 'react';
 
 // import luxx from '../images/luxx.png';
@@ -20,9 +20,9 @@ import {
     BodyText,
     BodyList,
     BodyListItem,
-    BodyCalloutText,
-    BodyImageContainer,
-    BodyImage,
+    // BodyCalloutText,
+    // BodyImageContainer,
+    // BodyImage,
     VimeoEmbed,
     BodyVideoContainer,
     SubHeaderText,

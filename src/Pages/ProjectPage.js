@@ -8,7 +8,6 @@ import LUXXContent from '../Pages/LUXXContent';
 import GoogleCollapseContent from '../Pages/GoogleCollapseContent';
 import MeshContent from '../Pages/MeshContent';
 import Header from '../Components/Header';
-import styled from 'styled-components';
 
 import Footer from '../Components/Footer';
 

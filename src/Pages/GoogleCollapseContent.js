@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import React from 'react';
 
 import hgc1 from '../images/HGC/hgc.jpeg';
@@ -11,22 +11,22 @@ import {
     OverviewBarHeaderContainer,
     OverviewHeader,
     OverviewContent,
-    OverviewUnderContainer,
-    OverviewUnderContent,
+    // OverviewUnderContainer,
+    // OverviewUnderContent,
     // OverviewTeamContainer,
-    OverviewRoleContainer,
-    OverviewTechContainer,
+    // OverviewRoleContainer,
+    // OverviewTechContainer,
     MainContentContainer,
     HeaderTextSeparator,
     HeaderText,
     BodyText,
-    BodyList,
-    BodyListItem,
-    BodyCalloutText,
+    // BodyList,
+    // BodyListItem,
+    // BodyCalloutText,
     BodyImageContainer,
     BodyImage,
-    VimeoEmbed,
-    BodyVideoContainer,
+    // VimeoEmbed,
+    // BodyVideoContainer,
 } from './ProjectContent';
 
 export default (props) => {
@@ -148,7 +148,7 @@ export default (props) => {
                     It was one of the coolest experiences of my life so far.
                 </BodyText>
                 <BodyText>
-                    Here's the main passage. It continues on into the remainder of that chapter, but you'll have to buy your own copy of the book to read the rest 😉
+                    Here's the main passage. It continues on into the remainder of that chapter, but you'll have to buy your own copy of the book to read the rest <span role="img" aria-label="wink">😉</span>
                 </BodyText>
 
                 <BodyImageContainer>

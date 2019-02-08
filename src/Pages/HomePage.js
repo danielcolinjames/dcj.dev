@@ -6,7 +6,7 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import IntroSection from '../Components/IntroSection';
 import ProjectsSection from '../Components/ProjectsSection';
-import HighlightsSection from '../Components/HighlightsSection';
+// import HighlightsSection from '../Components/HighlightsSection';
 
 export default (props) => {
     return (

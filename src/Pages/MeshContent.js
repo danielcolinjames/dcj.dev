@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import React from 'react';
 
 import mesh1 from '../images/Mesh/mesh_hero.png';
 import mesh2 from '../images/Mesh/mesh_logo.png';
 
-import mesh3 from '../images/Mesh/mesh_logo.png';
-import mesh4 from '../images/Mesh/mesh_logo.png';
-import mesh5 from '../images/Mesh/mesh_logo.png';
+// import mesh3 from '../images/Mesh/mesh_logo.png';
+// import mesh4 from '../images/Mesh/mesh_logo.png';
+// import mesh5 from '../images/Mesh/mesh_logo.png';
 // import luxx from '../images/luxx.png';
 // import luxx from '../images/luxx.png';
 
@@ -28,7 +28,7 @@ import {
     BodyText,
     BodyList,
     BodyListItem,
-    BodyCalloutText,
+    // BodyCalloutText,
     BodyImageContainer,
     BodyImage,
     VimeoEmbed,

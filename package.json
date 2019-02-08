@@ -2,10 +2,8 @@
   "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://danielcolinjames.github.io/portfolio-site-react",
   "dependencies": {
     "@u-wave/react-vimeo": "^0.6.0",
-    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-favicon": "0.0.14",
@@ -16,8 +14,6 @@
     "styled-components": "^3.4.10"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

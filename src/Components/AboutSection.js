@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
+// import styled, { css } from 'styled-components';
 import React, { Fragment } from 'react';
 
-import picture from '../images/testoutput.png';
+// import picture from '../images/testoutput.png';
 
 import {
     ContentBackground,
@@ -11,7 +11,7 @@ import {
     BodyButton
 } from '../Pages/ProjectContent';
 
-export default (props) => {
+export default () => {
     return (
         <Fragment>
             <ContentBackground
