@@ -6,6 +6,7 @@ import './App.css';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import ProjectPage from './Pages/ProjectPage';
+import NoMatchPage from './Pages/404Page';
 
 import abacusImg from './images/abacus.png';
 import googleCollapseImg from './images/googlecollapse.png';
@@ -98,6 +99,7 @@ class App extends Component {
                   projectImgSrc={luxxImg}
                 />}
               />
+              <Route component={NoMatchPage} />
             </Switch>
           </div>
         </ScrollToTop>

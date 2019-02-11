@@ -8,6 +8,10 @@ export const ContentBackground = styled.div`
     /* min-height: 850px; */
     width: 100%;
     padding-bottom: 100px;
+
+    ${props => props.noMatch404 && css`
+        flex: 1;
+    `};
 `;
 
 export const OverviewBarContainer = styled.div`
@@ -17,6 +21,7 @@ export const OverviewBarContainer = styled.div`
     
     @media (max-width: 700px) {
         min-height: 90px;
+        padding-bottom: 0;
     }
 `;
 
@@ -38,7 +43,7 @@ export const OverviewHeader = styled.h2`
 
     margin: 0 10px 10px 50px;
 
-    ${props => props.secondary && css `
+    ${props => props.secondary && css`
         color: #999;
         font-size: 1em;
 
@@ -60,7 +65,7 @@ export const OverviewContent = styled.p`
         font-size: 1.1em;
     }
 
-    ${props => props.secondary && css `
+    ${props => props.secondary && css`
         margin: 0 10px 0 50px;
         color: #bbb;
         font-size: 1em;
@@ -119,14 +124,17 @@ export const MainContentContainer = styled.div`
     margin: 0 auto;
 
     @media (max-width: 700px) {
-
         grid-template-rows: auto;
         grid-gap: 0;
-    }
+    };
 
     ${props => props.about && css`
         padding-top: 50px;
-    `}
+    `};
+
+    ${props => props.noMatch404 && css`
+        flex: 1;
+    `};
 `;
 
 export const HeaderTextSeparator = styled.div`
@@ -161,7 +169,7 @@ export const HeaderText = styled.h2`
         font-size: 2em;
     }
 
-    ${props => props.first && css `
+    ${props => props.first && css`
         margin: 40px 50px 0 50px;
     `}
 `;
@@ -288,11 +296,11 @@ export const BodyImageContainer = styled.div`
         margin: 20px 5px;
     }
 
-    ${props => props.mesh1 && css `
+    ${props => props.mesh1 && css`
         margin: 75px 10px 0 10px;
     `}
 
-    ${props => props.mesh2 && css `
+    ${props => props.mesh2 && css`
         width: 75%;
         margin: 0 auto;
 
@@ -301,7 +309,7 @@ export const BodyImageContainer = styled.div`
         }
     `}
 
-    ${props => props.hgc1 && css `
+    ${props => props.hgc1 && css`
         margin: 50px 200px;
         @media (max-width: 1200px) {
             margin: 30px 20px;
@@ -315,12 +323,12 @@ export const BodyImage = styled.img.attrs({
     width: 100%;
 
     /* special rules for particular images */
-    ${props => props.abacus1 && css `
+    ${props => props.abacus1 && css`
         width: 91%;
         /* margin: 20px 10px; */
     `}
 
-    ${props => props.mesh2 && css `
+    ${props => props.mesh2 && css`
         margin: 0 auto;
     `}
 `;
