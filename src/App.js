@@ -110,7 +110,7 @@ class App extends Component {
                   projectImgSrc={luxxImg}
                 />}
               />
-              <Route component={NoMatchPage} />
+              <Route path='*' exact={true} component={NoMatchPage} />
             </Switch>
           </div>
         </ScrollToTop>
