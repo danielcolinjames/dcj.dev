@@ -21,3 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 *.psd
 *.zip
+
+# Source files. Make sure to back these up elsewhere!
+/local_source_files
