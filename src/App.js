@@ -110,6 +110,7 @@ class App extends Component {
                   projectImgSrc={luxxImg}
                 />}
               />
+              <Route path='resume.pdf' exact={true} />
               <Route path='*' exact={true} component={NoMatchPage} />
             </Switch>
           </div>
