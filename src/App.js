@@ -22,6 +22,9 @@ import ReactGA from 'react-ga';
 ReactGA.initialize('UA-134209149-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+// for /resume.pdf, because of this: https://stackoverflow.com/questions/45782571/serve-anotherstandalone-page-or-static-file-in-website-built-with-react
+const reload = () => window.location.reload();
+
 class App extends Component {
   // if we want to change the background of body later
   // componentWillMount () {
@@ -110,7 +113,7 @@ class App extends Component {
                   projectImgSrc={luxxImg}
                 />}
               />
-              <Route path='resume.pdf' exact={true} />
+              <Route path='/resume.pdf' exact={true} onEnter={reload} />
               <Route path='*' exact={true} component={NoMatchPage} />
             </Switch>
           </div>
