@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fragment } from 'react';
 import MetaTags from 'react-meta-tags';
 
 import Header from '../Components/Header';
