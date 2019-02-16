@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: danielcolinjames.com
+Token: bd41ff01c86a7daabf7f91853bea222c5b86ddc7b9ff962781fde30e12eda935
