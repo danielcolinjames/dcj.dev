@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import React from 'react';
 
-import picture from '../images/testoutput.png';
+import picture from '../images/me.png';
 
 
 export const IntroBackgroundContainer = styled.div`
