@@ -77,7 +77,7 @@ const ProjectCardContainer = styled(NavLink)`
         "text img";
 
     :hover{
-        transform: scale(1.05);
+        transform: scale(1.012);
     }
 
     @media (max-width: 700px) {
