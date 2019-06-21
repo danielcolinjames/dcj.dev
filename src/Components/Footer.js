@@ -129,6 +129,7 @@ export default (props) => {
                             </FooterLinkContainer>
                             <FooterLinkContainer
                                 url="https://open.spotify.com/user/danielcolinjames"
+                                // url="https://instagram.com/d.cj"
                                 bgColor={props.bgColor}
                                 fgColor={props.fgColor}
                                 target="_blank" >
