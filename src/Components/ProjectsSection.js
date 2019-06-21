@@ -9,6 +9,9 @@ import googlecollapse from '../images/googlecollapse.png';
 import mesh from '../images/mesh.png';
 import luxx from '../images/luxx.png';
 
+import givebat from '../images/gb_shape.png';
+import forwardtick from '../images/ForwardTickWhite.png';
+
 const ProjectsBackgroundContainer = styled.div`
     background-color: ${props => props.bgc};
     min-height: 800px;
@@ -47,11 +50,11 @@ const SectionIntroText = styled.p`
     }
 `
 
-const ProjectCardContainer = styled(NavLink)`
+const ProjectCardContainer = styled.a`
 
     max-width: 800px;
     width: 90%;
-    min-height: 200px;
+    min-height: 100px;
     height: auto;
 
     /* border: 5px solid ${props => props.bgc}; */
@@ -62,6 +65,8 @@ const ProjectCardContainer = styled(NavLink)`
     align-self: start;
 
     background-color: ${props => props.bgc};
+
+    box-shadow: 0 0 100px rgba(0,0,0,0.04), 0 0 10px rgba(0,0,0,0.05);
 
     border-radius: 35px;
 
@@ -77,7 +82,7 @@ const ProjectCardContainer = styled(NavLink)`
         "text img";
 
     :hover{
-        transform: scale(1.05);
+        transform: scale(1.012);
     }
 
     @media (max-width: 700px) {
@@ -85,8 +90,8 @@ const ProjectCardContainer = styled(NavLink)`
         grid-template-rows: 1fr auto;
 
         grid-template-areas:
-            "text"
-            "img";
+            "img"
+            "text";
     }
 
     @media (hover: none) {
@@ -133,7 +138,6 @@ const ProjectCardBody = styled.p`
 
     /* align-self: start; */
     margin: 0 0 5px 0;
-
 `
 
 const ProjectCardImage = styled.img.attrs({
@@ -143,6 +147,7 @@ const ProjectCardImage = styled.img.attrs({
 
     height: auto;
     max-width: 200px;
+    max-height: 100px;
 
     margin: 30px;
 
@@ -151,8 +156,9 @@ const ProjectCardImage = styled.img.attrs({
     align-self: center;
 
     @media (max-width: 700px) {
-        margin: 0 30px 30px 30px;
-        justify-self: start;
+        margin: 30px 30px 0 30px;
+        justify-self: center;
+
     }
 `
 
@@ -161,10 +167,35 @@ export default () => {
     return (
         <ProjectsBackgroundContainer bgc="white">
             <SectionIntroText>
+                Here are a couple things I'm working on right now:
+            </SectionIntroText>
+                <ProjectCardContainer bgc="#ffffff" target="_blank" href="https://givebat.com">
+                    
+                    <ProjectCardTextContainer>
+                        <ProjectCardTitle>givebat.com</ProjectCardTitle>
+                        <ProjectCardSubtitle>Website featuring Brave Creators</ProjectCardSubtitle>
+                    </ProjectCardTextContainer>
+
+                    <ProjectCardImage imgsrc={givebat}></ProjectCardImage>
+
+                </ProjectCardContainer>
+
+                <ProjectCardContainer bgc="white" target="_blank" href="https://forwardtick.com">
+
+                    <ProjectCardTextContainer>
+                        <ProjectCardTitle>Forward Tick</ProjectCardTitle>
+                        <ProjectCardSubtitle>Medium publication about the future</ProjectCardSubtitle>
+                    </ProjectCardTextContainer>
+
+                    <ProjectCardImage imgsrc={forwardtick}></ProjectCardImage>
+
+                </ProjectCardContainer>
+
+            <SectionIntroText>
                 Here are a few of my favourite projects I've worked on so far:
             </SectionIntroText>
 
-            <ProjectCardContainer bgc="#FFEB7Caa" to="/abacus">
+            <ProjectCardContainer bgc="#FFEB7Caa" href="/abacus">
 
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>Abacus</ProjectCardTitle>
@@ -176,7 +207,7 @@ export default () => {
 
             </ProjectCardContainer>
 
-            <ProjectCardContainer bgc="#A5FFD2aa" to="/how-google-collapsed">
+            <ProjectCardContainer bgc="#A5FFD2aa" href="/how-google-collapsed">
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>How Google Collapsed</ProjectCardTitle>
                     <ProjectCardSubtitle>Medium Article</ProjectCardSubtitle>
@@ -187,7 +218,7 @@ export default () => {
 
             </ProjectCardContainer>
 
-            <ProjectCardContainer bgc="#A5D2FFaa" to="/mesh">
+            <ProjectCardContainer bgc="#A5D2FFaa" href="/mesh">
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>Mesh</ProjectCardTitle>
                     <ProjectCardSubtitle>Live Data Visualization and Mobile App</ProjectCardSubtitle>
@@ -198,7 +229,7 @@ export default () => {
 
             </ProjectCardContainer>
 
-            <ProjectCardContainer bgc="#FFA5A5aa" to="/luxx">
+            <ProjectCardContainer bgc="#FFA5A5aa" href="/luxx">
                 <ProjectCardTextContainer>
                     <ProjectCardTitle>LUXX</ProjectCardTitle>
                     <ProjectCardSubtitle>Wearable Technology Multiplayer Game</ProjectCardSubtitle>

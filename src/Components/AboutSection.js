@@ -24,7 +24,7 @@ export default () => {
                         In 2017, I completed my undergraduate degree in Digital Media Development from the Lassonde School of Engineering at York University, where I learned to think like an engineer and an artist.
                     </BodyText>
                     <BodyText>
-                        Right now, I'm finishing up the Master of Digital Media program at the Centre for Digital Media, where I've learned how to think like a designer and build effective digital products.
+                        I just finished the Master of Digital Media program at the Centre for Digital Media, where I've learned how to think like a designer and build effective digital products.
                     </BodyText>
                     <BodyText>
                         I'm endlessly curious about how things work, and I love nothing more than designing and building new things.
@@ -44,6 +44,7 @@ export default () => {
                         buttonColour={"#c0ffee"} >
                         My resume
                     </BodyButton>
+
                 </MainContentContainer>
             </ContentBackground>
         </Fragment>
