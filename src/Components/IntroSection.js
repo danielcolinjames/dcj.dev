@@ -160,7 +160,7 @@ export default (props) => {
                 Hey! {props.emoji} I'm Daniel.
             </IntroTextH1>
             <IntroTextH2>
-                I'm a writer, developer, product manager, and other things. I'm currently working on a bunch of passion projects, and I'm open to new opportunities.
+                I'm a writer, developer, product manager, and other things. I'm currently working on passion projects, and I'm open to new opportunities.
             </IntroTextH2>
 
         </IntroBackgroundContainer>
