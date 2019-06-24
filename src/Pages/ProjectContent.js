@@ -248,33 +248,31 @@ export const BodyLink = styled.a`
 `;
 
 export const BodyButton = styled.a`
-    /* background-color: ${props => props.buttonColour}; */
-    background-color: white;
+    background-color: #c0ffee;
     font-family: "Europa", Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 1.5em;
-    color: #888;
+    color: black;
     text-align: center;
     line-height: inherit;
 
     text-decoration: none;
 
     width: 150px;
-    height: 1.5em;
+    height: 30px;
 
-    padding: 1em;
+    padding: 20px;
     margin: 50px 50px;
 
-    border: 5px solid #c0ffee;
-    border-radius: 10px;
-    /* border: none; */
-    /* margin: 20px 50px 0 50px; */
+    border: 3px solid black;
 
-    transition: 300ms;
+    transition: 200ms;
 
     :hover {
-        background-color: ${props => props.buttonColour};
+        background-color: white;
         color: black;
+
+        box-shadow: 0 0 50px rgba(0,0,0,0.05), 0 0 100px #c0ffee88;
     }
 
     @media (max-width: 700px) {
