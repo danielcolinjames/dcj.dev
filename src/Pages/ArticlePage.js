@@ -3,11 +3,11 @@ import { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 import MetaTags from "react-meta-tags";
 
-import AbacusContent from "../Pages/AbacusContent";
-import LUXXContent from "../Pages/LUXXContent";
-import GoogleCollapseContent from "../Pages/GoogleCollapseContent";
-import MeshContent from "../Pages/MeshContent";
-import StorySortContent from "../Pages/StorySortContent";
+import AbacusContent from "./AbacusContent";
+import LUXXContent from "./LUXXContent";
+import GoogleCollapseContent from "./GoogleCollapseContent";
+import MeshContent from "./MeshContent";
+import StorySortContent from "./StorySortContent";
 import Header from "../Components/Header";
 
 import Footer from "../Components/Footer";
@@ -34,29 +34,13 @@ export default props => {
         hoverColour={props.themeColourDark}
       ></Header>
 
-      <IntroBackgroundContainer bgc={props.themeColour} project>
-        <IntroPicture
-          imgsrc={props.projectImgSrc}
-          alignment="center"
-          alignmentMobile="center"
-          justifyMobile="start"
-          marginBottom="60px"
-          project
-        />
+      <IntroBackgroundContainer bgc={props.themeColour} article>
+        <IntroTextH1 article>{props.projectTitle}</IntroTextH1>
 
-        <IntroTextH1 project>{props.projectTitle}</IntroTextH1>
-
-        <IntroTextH2 project>{props.projectType}</IntroTextH2>
+        <IntroTextH2 article>{props.projectType}</IntroTextH2>
       </IntroBackgroundContainer>
 
       <Switch>
-        <Route path="/abacus" render={() => <AbacusContent {...props} />} />
-        <Route
-          path="/how-google-collapsed"
-          render={() => <GoogleCollapseContent {...props} />}
-        />
-        <Route path="/luxx" render={() => <LUXXContent {...props} />} />
-        <Route path="/mesh" render={() => <MeshContent {...props} />} />
         <Route
           path="/how-to-sort-stories-in-storybook"
           render={() => <StorySortContent {...props} />}

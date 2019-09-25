@@ -1,195 +1,185 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import React, { Fragment } from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-import HomeIcon from '../images/ic_home_24px.png';
-import AboutIcon from '../images/ic_person_24px.png';
+import HomeIcon from "../images/ic_home_24px.png";
+import AboutIcon from "../images/ic_person_24px.png";
+import BlogIcon from "../images/ic_create_24px.png";
 
 const Header = styled.div`
-    background: ${props => props.background};
-    height: 60px;
-    width: 100%;
-    
-    position: sticky;
-    top: 0;
-    z-index: 2;
+  background: ${props => props.background};
+  height: 60px;
+  width: 100%;
 
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 
-    grid-template-areas:
-        "first middle last";
+  display: grid;
+  grid-template-columns: 210px auto 210px;
+  grid-template-rows: 1fr;
 
-    @media(max-width: 700px) {
-        grid-template-columns: 1fr 1fr 1fr;
-        height: 80px;
+  grid-template-areas: "first middle last";
 
-        grid-template-areas:
-        "first middle last";
-    }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 80px;
+
+    grid-template-areas: "first middle last";
+  }
 `;
 
 const FirstLinkContainer = styled.div`
-    /* background-color: red; */
-    grid-area: first;
+  /* background-color: red; */
+  grid-area: first;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 
-    @media(max-width: 700px) {
-        justify-self: start;
-        padding-left: 30px;
-    }
+  @media (max-width: 700px) {
+    justify-self: start;
+    padding-left: 30px;
+  }
 `;
 
 const MiddleLinksContainer = styled.div`
-    /* background-color: blue; */
-    grid-area: middle;
+  /* background-color: blue; */
+  grid-area: middle;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    align-items: center;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media (max-width: 700px) {
     justify-content: center;
+  }
 `;
 
 const LastLinkContainer = styled.div`
-    /* background-color: green; */
-    grid-area: last;
+  /* background-color: green; */
+  grid-area: last;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    align-items: center;
-    justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
 
-    @media(max-width: 700px) {
-        justify-self: end;
-        padding-right: 30px;
-    }
+  @media (max-width: 700px) {
+    justify-self: end;
+    padding-right: 30px;
+  }
 `;
 
 const HeaderLinkContainer = styled(NavLink)`
-    /* width: 100%;
+  /* width: 100%;
     height: 100%; */
-    min-height: 40px;
-    min-width: 140px;
-    max-width: 150px;
+  min-height: 40px;
+  min-width: 140px;
+  max-width: 150px;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    /* padding: 10px 50px 10px 50px; */
+  /* padding: 10px 50px 10px 50px; */
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px;
+
+  border-radius: 5px;
+  /* border: 1px solid */
+
+  @media (max-width: 700px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    margin: 10px;
+    min-height: 60px;
+    min-width: 75px;
 
-    border-radius: 5px;
-    /* border: 1px solid */
+    margin: 0 0;
 
-    @media(max-width: 700px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    /* padding: 10px 50px 10px 50px; */
+  }
 
-        min-height: 60px;
-        min-width: 75px;
+  /* transition: transform 0.3s; */
+  background-color: none;
 
-        margin: 0 0;
+  :hover {
+    /* transform: translate(0, -2.5px); */
+    background-color: ${props => props.hoverColour};
+    transition: background-color 150ms linear;
+  }
 
-        /* padding: 10px 50px 10px 50px; */
-    }
-
-    /* transition: transform 0.3s; */
-    background-color: none;
-
+  @media (hover: none) {
+    /* on devices that do not have a pointer, don't have hover effects */
     :hover {
-        /* transform: translate(0, -2.5px); */
-        background-color: ${props => props.hoverColour};
-        transition: background-color 150ms linear;
+      transform: none;
     }
-
-    @media (hover: none) {
-        /* on devices that do not have a pointer, don't have hover effects */
-        :hover{
-            transform: none;
-        }
-    }
+  }
 `;
 
 const HeaderLinkIcon = styled.img.attrs({
-    src: props => props.imgsrc
+  src: props => props.imgsrc
 })`
-    max-height: 10px;
-    width: auto;
-    /* background-color: purple; */
+  max-height: 10px;
+  width: auto;
+  /* background-color: purple; */
 `;
 
 const HeaderLinkText = styled.p`
-    text-decoration: none;
-    text-align: left;
-    color: #777;
-    font-family: "Europa", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    margin: 0 0 0 10px;
+  text-decoration: none;
+  text-align: left;
+  color: #777;
+  font-family: "Europa", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  margin: 0 0 0 10px;
 
-    @media(max-width: 700px) {
-        margin: 5px 0 0 0;
-        font-size: 0.8em;
-    }
+  @media (max-width: 700px) {
+    margin: 5px 0 0 0;
+    font-size: 0.8em;
+  }
 
-    /* background-color: pink; */
+  /* background-color: pink; */
 `;
 
-export default (props) => {
-    return (
-        <Fragment>
-            <Header
-                background={props.background}
-                >
-                <FirstLinkContainer>
-                    <HeaderLinkContainer
-                        to="/"
-                        hoverColour={props.hoverColour}>
+export default props => {
+  return (
+    <Fragment>
+      <Header background={props.background}>
+        <FirstLinkContainer>
+          <HeaderLinkContainer to="/" hoverColour={props.hoverColour}>
+            <HeaderLinkIcon imgsrc={HomeIcon}></HeaderLinkIcon>
 
-                        <HeaderLinkIcon
-                            imgsrc={HomeIcon}>
-                        </HeaderLinkIcon>
+            <HeaderLinkText>Home</HeaderLinkText>
+          </HeaderLinkContainer>
+        </FirstLinkContainer>
 
-                        <HeaderLinkText>
-                            Home
-                        </HeaderLinkText>
+        <MiddleLinksContainer>
+          <HeaderLinkContainer to="/blog" hoverColour={props.hoverColour}>
+            <HeaderLinkIcon imgsrc={BlogIcon}></HeaderLinkIcon>
 
-                    </HeaderLinkContainer>
-                </FirstLinkContainer>
+            <HeaderLinkText>Blog</HeaderLinkText>
+          </HeaderLinkContainer>
+        </MiddleLinksContainer>
 
-                <MiddleLinksContainer>
-                </MiddleLinksContainer>
+        <LastLinkContainer>
+          <HeaderLinkContainer to="/about" hoverColour={props.hoverColour}>
+            <HeaderLinkIcon imgsrc={AboutIcon}></HeaderLinkIcon>
 
-                <LastLinkContainer>
-                    <HeaderLinkContainer
-                        to="/about"
-                        hoverColour={props.hoverColour}>
-
-                        <HeaderLinkIcon
-                            imgsrc={AboutIcon}>
-                        </HeaderLinkIcon>
-
-                        <HeaderLinkText>
-                            About me
-                        </HeaderLinkText>
-
-                    </HeaderLinkContainer>
-                </LastLinkContainer>
-            </Header>
-        </Fragment>
-    )
-}
+            <HeaderLinkText>About me</HeaderLinkText>
+          </HeaderLinkContainer>
+        </LastLinkContainer>
+      </Header>
+    </Fragment>
+  );
+};

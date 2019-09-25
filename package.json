@@ -5,6 +5,7 @@
   "dependencies": {
     "@u-wave/react-vimeo": "^0.6.0",
     "react": "^16.4.1",
+    "react-code-snippet": "^0.6.13",
     "react-dom": "^16.4.1",
     "react-favicon": "0.0.14",
     "react-ga": "^2.5.7",
