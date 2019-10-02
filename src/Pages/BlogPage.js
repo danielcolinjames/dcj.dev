@@ -58,8 +58,8 @@ export default props => {
                   How to Sort Stories in Storybook
                 </ProjectCardTitle>
                 <ProjectCardSubtitle>
-                  A comprehensive guide with code examples for this amazingly
-                  under-documented feature
+                  A comprehensive guide and code examples for how to order your
+                  stories in Storybook
                 </ProjectCardSubtitle>
               </ProjectCardTextContainer>
 

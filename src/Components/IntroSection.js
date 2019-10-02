@@ -84,7 +84,7 @@ export const IntroTextH1 = styled.h1`
       margin: 50px auto 0 auto;
 
       @media (max-width: 1000px) {
-        font-size: 4em;
+        font-size: 3.5em;
       }
     `}
 `;
@@ -140,8 +140,9 @@ export const IntroTextH2 = styled.p`
 
       @media (max-width: 700px) {
         /* font-size: 1.25em; */
-        margin: 10px 40px 10px 50px;
+        margin: 10px 40px 50px 50px;
         min-width: 200px;
+        font-size: 1.5em;
       }
     `}
 `;

@@ -151,7 +151,7 @@ class App extends Component {
                     themeColourDarker={"#0fffbe"}
                     projectTitle={"How to Sort Stories in Storybook"}
                     projectType={
-                      "A comprehensive guide and code examples for an amazingly under-documented feature"
+                      "A comprehensive guide and code examples for how to order your stories in Storybook"
                     }
                   />
                 )}

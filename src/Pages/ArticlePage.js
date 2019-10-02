@@ -29,12 +29,9 @@ export default props => {
         <meta name="theme-color" content={props.themeColour} />
       </MetaTags>
       {/* <Header background={props.themeColour}></Header> */}
-      <Header
-        background={props.themeColourHeader}
-        hoverColour={props.themeColourDark}
-      ></Header>
+      <Header background="#EFEFEF" hoverColour="#DFDFDF" />
 
-      <IntroBackgroundContainer bgc={props.themeColour} article>
+      <IntroBackgroundContainer bgc={"#EFEFEF"} article>
         <IntroTextH1 article>{props.projectTitle}</IntroTextH1>
 
         <IntroTextH2 article>{props.projectType}</IntroTextH2>
