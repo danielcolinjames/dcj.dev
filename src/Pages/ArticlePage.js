@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 
 import AbacusContent from "./AbacusContent";
 import LUXXContent from "./LUXXContent";
@@ -24,10 +24,10 @@ import {
 export default props => {
   return (
     <Fragment>
-      <MetaTags>
+      <Helmet>
         <title>{props.projectTitle}</title>
         <meta name="theme-color" content={props.themeColour} />
-      </MetaTags>
+      </Helmet>
       {/* <Header background={props.themeColour}></Header> */}
       <Header background="#EFEFEF" hoverColour="#DFDFDF" />
 

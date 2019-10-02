@@ -16,7 +16,7 @@ import meshImg from "./images/mesh.png";
 import luxxImg from "./images/luxx.png";
 import storybooksort from "./images/storybooksort.jpg";
 
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 
 import ScrollToTop from "./Components/ScrollToTop";
 
@@ -36,16 +36,13 @@ class App extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <div className="App">
-            <MetaTags>
+            {/* <Helmet>
               <meta
                 name="description"
-                content="Daniel Colin James — personal website"
+                content="Daniel Colin James' personal site"
               />
-              <meta
-                name="og:title"
-                content="Daniel Colin James — personal website"
-              />
-            </MetaTags>
+              <meta name="og:title" content="dcj.dev" />
+            </Helmet> */}
             <Switch>
               <Route exact path="/" component={HomePage} />
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 
 import AbacusContent from "../Pages/AbacusContent";
 import LUXXContent from "../Pages/LUXXContent";
@@ -22,12 +22,30 @@ import {
 // import projectPicture from '../images/abacus.png';
 
 export default props => {
+  const title = `${props.projectTitle} — ${props.projectType}`;
+  const description = props.projectOverview;
+  const ogImage = "https://dcj.dev/og.jpg";
+
   return (
     <Fragment>
-      <MetaTags>
-        <title>{props.projectTitle}</title>
+      <Helmet>
+        <title>{title}</title>
         <meta name="theme-color" content={props.themeColour} />
-      </MetaTags>
+
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="dcj.dev" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dcwj" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:creator" content="@dcwj" />
+        <meta name="twitter:image" content={ogImage} />
+      </Helmet>
       {/* <Header background={props.themeColour}></Header> */}
       <Header
         background={props.themeColourHeader}
