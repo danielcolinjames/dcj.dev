@@ -6,14 +6,17 @@ import "./App.css";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import ProjectPage from "./Pages/ProjectPage";
+import ArticlePage from "./Pages/ArticlePage";
+import BlogPage from "./Pages/BlogPage";
 import NoMatchPage from "./Pages/404Page";
 
 import abacusImg from "./images/abacus.png";
 import googleCollapseImg from "./images/googlecollapse.png";
 import meshImg from "./images/mesh.png";
 import luxxImg from "./images/luxx.png";
+import storybooksort from "./images/storybooksort.jpg";
 
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 
 import ScrollToTop from "./Components/ScrollToTop";
 
@@ -33,16 +36,13 @@ class App extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <div className="App">
-            <MetaTags>
+            {/* <Helmet>
               <meta
                 name="description"
-                content="Daniel Colin James — personal website"
+                content="Daniel Colin James' personal site"
               />
-              <meta
-                name="og:title"
-                content="Daniel Colin James — personal website"
-              />
-            </MetaTags>
+              <meta name="og:title" content="dcj.dev" />
+            </Helmet> */}
             <Switch>
               <Route exact path="/" component={HomePage} />
 
@@ -133,24 +133,23 @@ class App extends Component {
                 )}
               />
 
+              <Route path="/blog" render={props => <BlogPage />} />
               <Route
-                path="/luxx"
+                path="/how-to-sort-stories-in-storybook"
                 render={props => (
-                  <ProjectPage
+                  <ArticlePage
                     {...props}
-                    themeColourLight={"#FFEDED"}
-                    themeColourReal={"#FFD2D2"}
-                    themeColour={"#FFA5A5aa"}
-                    themeColourHeader={"#FFA5A5dd"}
-                    themeColourSolid={"#FFA5A5"}
-                    themeColourDark={"#E69494"}
-                    themeColourDarker={"#BF7B7B"}
-                    projectTitle={"LUXX"}
-                    projectType={"Wearable Technology Multiplayer Game"}
-                    projectOverview={
-                      "I developed a networking protocol, hardware-level functionality, and game logic for a technology-enhanced version of tag."
+                    themeColourLight={"#e7fff9"}
+                    themeColourReal={"#c0ffee"}
+                    themeColour={"#c0ffee"}
+                    themeColourHeader={"#c0ffeedd"}
+                    themeColourSolid={"#85ffde"}
+                    themeColourDark={"#37ffc9"}
+                    themeColourDarker={"#0fffbe"}
+                    projectTitle={"How to Sort Stories in Storybook"}
+                    projectType={
+                      "A comprehensive guide and code examples for an amazingly under-documented feature"
                     }
-                    projectImgSrc={luxxImg}
                   />
                 )}
               />

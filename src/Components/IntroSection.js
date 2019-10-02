@@ -1,8 +1,7 @@
-import styled, { css } from 'styled-components';
-import React from 'react';
+import styled, { css } from "styled-components";
+import React from "react";
 
-import picture from '../images/me.png';
-
+import picture from "../images/me.png";
 
 export const IntroBackgroundContainer = styled.div`
     background-color: ${props => props.bgc};
@@ -31,82 +30,124 @@ export const IntroBackgroundContainer = styled.div`
             /* "picture picture"; */
     }
     /* Change things when this component has the "project" prop attached */
-    ${props => props.project && css`
-        
-    `}
+    ${props => props.project && css``}
+
+    /* Change things when this component has the "article" prop attached */
+    ${props =>
+      props.article &&
+      css`
+        grid-template-areas:
+          "header"
+          "body";
+      `}
 `;
 
 export const IntroTextH1 = styled.h1`
-    color: black;
-    grid-area: header;
-    font-size: 3em;
-    font-family: "Europa", Arial, Helvetica, sans-serif;
-    font-weight: 700;
-        
-    max-width: 600px;
-    text-align: left;
-    margin: 50px 30px 0 30px;
-    
-    /* width: 100%; */
+  color: black;
+  grid-area: header;
+  font-size: 3em;
+  font-family: "Europa", Arial, Helvetica, sans-serif;
+  font-weight: 700;
 
-    align-self: end;
-    justify-self: start;
+  max-width: 600px;
+  text-align: left;
+  margin: 50px 30px 0 30px;
 
-    @media (max-width: 700px) {
-        /* font-size: 2em; */
-        margin: 50px 50px 0 50px;
-        font-size: 2.5em;
-    }
+  /* width: 100%; */
 
-    ${props => props.project && css`
-        font-size: 5em;
-        color: #4B4B4B;
+  align-self: end;
+  justify-self: start;
 
-        @media(max-width: 1000px) {
-            font-size: 4em;
-        }
+  @media (max-width: 700px) {
+    /* font-size: 2em; */
+    margin: 50px 50px 0 50px;
+    font-size: 2.5em;
+  }
+
+  ${props =>
+    props.project &&
+    css`
+      font-size: 5em;
+      color: #4b4b4b;
+
+      @media (max-width: 1000px) {
+        font-size: 4em;
+      }
     `}
-`
+  ${props =>
+    props.article &&
+    css`
+      font-size: 5em;
+      max-width: 800px;
+      color: #4b4b4b;
+
+      margin: 50px auto 0 auto;
+
+      @media (max-width: 1000px) {
+        font-size: 4em;
+      }
+    `}
+`;
 
 export const IntroTextH2 = styled.p`
-    grid-area: body;
-    font-size: 1.5em;
-    font-family: "Europa", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    
-    max-width: 550px;
-    text-align: left;
-    margin: 10px 30px 50px 30px;
+  grid-area: body;
+  font-size: 1.5em;
+  font-family: "Europa", Arial, Helvetica, sans-serif;
+  font-weight: 300;
 
-    /* width: 100%; */
+  max-width: 550px;
+  text-align: left;
+  margin: 10px 30px 50px 30px;
 
-    align-self: start;
-    justify-self: start;
+  /* width: 100%; */
 
-    /* background-color: red; */
+  align-self: start;
+  justify-self: start;
 
-    @media (max-width: 700px) {
-        font-size: 1.4em;
+  /* background-color: red; */
+
+  @media (max-width: 700px) {
+    font-size: 1.4em;
+    margin: 10px 40px 10px 50px;
+    min-width: 200px;
+  }
+
+  ${props =>
+    props.project &&
+    css`
+      font-family: "Europa", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 2em;
+      color: #666;
+
+      @media (max-width: 700px) {
+        /* font-size: 1.25em; */
         margin: 10px 40px 10px 50px;
         min-width: 200px;
-    }
-
-    ${props => props.project && css`
-        font-family: "Europa", Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        font-size: 2em;
-        color: #666;
-
-        @media (max-width: 700px) {
-            /* font-size: 1.25em; */
-            margin: 10px 40px 10px 50px;
-            min-width: 200px;
-        }
+      }
     `}
-`
+
+  ${props =>
+    props.article &&
+    css`
+      font-family: "Europa", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 2em;
+      color: #666;
+      max-width: 800px;
+
+      margin: 10px auto 50px auto;
+
+      @media (max-width: 700px) {
+        /* font-size: 1.25em; */
+        margin: 10px 40px 10px 50px;
+        min-width: 200px;
+      }
+    `}
+`;
 
 export const IntroPicture = styled.img.attrs({
-    src: props => props.imgsrc
+  src: props => props.imgsrc
 })`
     grid-area: picture;
 
@@ -136,33 +177,31 @@ export const IntroPicture = styled.img.attrs({
         align-self: ${props => props.alignmentMobile};
     }
 
-    ${props => props.project && css`
+    ${props =>
+      props.project &&
+      css`
         margin-right: 50px;
         max-width: 250px;
         height: auto;
 
-        @media(max-width: 1000px) {
-            /* font-size: 4em; */
-            margin-top: 30px;
+        @media (max-width: 1000px) {
+          /* font-size: 4em; */
+          margin-top: 30px;
         }
-    `}
+      `}
 `;
 
-export default (props) => {
-    return (
-        <IntroBackgroundContainer
-            bgc={props.bgc}>
-            <IntroPicture
-                imgsrc={picture}
-                alignment='end' />
+export default props => {
+  return (
+    <IntroBackgroundContainer bgc={props.bgc}>
+      <IntroPicture imgsrc={picture} alignment="end" />
 
-            <IntroTextH1>
-                Hey! {props.emoji} I'm Daniel.
-            </IntroTextH1>
-            <IntroTextH2>
-                I'm a writer, developer, product manager, and other things. I'm currently working on passion projects, and I'm open to new opportunities.
-            </IntroTextH2>
-
-        </IntroBackgroundContainer>
-    )
-}
+      <IntroTextH1>Hey! {props.emoji} I'm Daniel.</IntroTextH1>
+      <IntroTextH2>
+        I'm a writer, developer, product manager, and other things. I'm
+        currently working on passion projects, and I'm open to new
+        opportunities.
+      </IntroTextH2>
+    </IntroBackgroundContainer>
+  );
+};
