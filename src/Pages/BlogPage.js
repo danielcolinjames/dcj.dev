@@ -1,5 +1,5 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -36,10 +36,10 @@ export default props => {
         //TODO: implement this on all the pages so that the footer floats where it should regardless of the height of the page
       }}
     >
-      <MetaTags>
+      <Helmet>
         <title>dcj — blog</title>
         <meta name="theme-color" content="#c0ffee" />
-      </MetaTags>
+      </Helmet>
       <Header background="#c0ffee" hoverColour="#a4dbcc"></Header>
 
       <ContentBackground bgc="#fff">

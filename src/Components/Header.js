@@ -165,11 +165,11 @@ export default props => {
         </FirstLinkContainer>
 
         <MiddleLinksContainer>
-          <HeaderLinkContainer to="/blog" hoverColour={props.hoverColour}>
+          {/* <HeaderLinkContainer to="/blog" hoverColour={props.hoverColour}>
             <HeaderLinkIcon imgsrc={BlogIcon}></HeaderLinkIcon>
 
             <HeaderLinkText>Blog</HeaderLinkText>
-          </HeaderLinkContainer>
+          </HeaderLinkContainer> */}
         </MiddleLinksContainer>
 
         <LastLinkContainer>
