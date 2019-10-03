@@ -6,6 +6,11 @@ import Footer from "../Components/Footer";
 import NoMatch404Section from "../Components/404Section";
 
 export default props => {
+  const title = `dcj.dev — 404`;
+  const description =
+    "Sorry, this page doesn't exist. I probably messed something up.";
+  const ogImage = "https://dcj.dev/og.jpg";
+
   return (
     <div
       style={{
@@ -18,8 +23,22 @@ export default props => {
       }}
     >
       <Helmet>
-        <title>Daniel Colin James — 404</title>
         <meta name="theme-color" content="#c0ffee" />
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="dcj.dev" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dcwj" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:creator" content="@dcwj" />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
       <Header background="#c0ffee" hoverColour="#a4dbcc"></Header>
 
