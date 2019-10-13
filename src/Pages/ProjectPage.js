@@ -22,7 +22,7 @@ import {
 // import projectPicture from '../images/abacus.png';
 
 export default props => {
-  const title = `${props.projectTitle} — ${props.projectType}`;
+  const title = `${props.projectTitle} — ${props.projectType}, Daniel Colin James`;
   const description = props.projectOverview;
   const ogImage = "https://dcj.dev/og.jpg";
 

@@ -10,7 +10,7 @@ import ProjectsSection from "../Components/ProjectsSection";
 
 export default props => {
   const description = "Daniel Colin James's personal site";
-  const title = "dcj.dev";
+  const title = "Daniel Colin James";
   const ogImage = "https://dcj.dev/og.jpg";
   return (
     <Fragment>
