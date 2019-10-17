@@ -8,14 +8,14 @@ import IntroSection from "../Components/IntroSection";
 import ProjectsSection from "../Components/ProjectsSection";
 // import HighlightsSection from '../Components/HighlightsSection';
 
-export default props => {
+export default () => {
   const description = "Daniel Colin James's personal site";
   const title = "Daniel Colin James";
   const ogImage = "https://dcj.dev/og.jpg";
   return (
     <Fragment>
       <Helmet>
-        <title>dcj.dev</title>
+        <title>{title}</title>
         <meta name="theme-color" content="#EFEFEF" />
         <meta name="description" content={description} />
 
