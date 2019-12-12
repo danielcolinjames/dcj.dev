@@ -199,9 +199,9 @@ export default props => {
 
       <IntroTextH1>Hey! {props.emoji} I'm Daniel.</IntroTextH1>
       <IntroTextH2>
-        I'm a writer, developer, product manager, and other things. I'm
-        currently working on passion projects, and I'm open to new
-        opportunities.
+        I'm a writer and developer, and sometimes other things. All of my time
+        is currently spoken for, but feel free to reach out if you think I'd be
+        a good fit for something in the future.
       </IntroTextH2>
     </IntroBackgroundContainer>
   );

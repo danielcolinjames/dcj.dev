@@ -165,7 +165,7 @@ export default () => {
   return (
     <ProjectsBackgroundContainer bgc="white">
       <SectionIntroText>
-        Here are a couple things I'm working on right now:
+        Here are a couple passion projects I'm working on right now:
       </SectionIntroText>
       <ProjectCardContainer
         bgc="#ffffff"
