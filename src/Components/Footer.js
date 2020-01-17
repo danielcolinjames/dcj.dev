@@ -96,7 +96,7 @@ export default (props) => {
 
                     <FooterCreditContainer>
                         <FooterCredit>
-                            <p>© 2019 Daniel James</p>
+                            <p>© 2020 Daniel James</p>
                             <p>Designed and developed by Daniel James</p>
                         </FooterCredit>
                     </FooterCreditContainer>
