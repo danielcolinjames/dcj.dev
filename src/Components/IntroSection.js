@@ -4,7 +4,7 @@ import React from "react";
 import picture from "../images/me.png";
 
 export const IntroBackgroundContainer = styled.div`
-    background-color: ${props => props.bgc};
+    background-color: ${(props) => props.bgc};
     min-height: 400px;
     width: 100%;
 
@@ -30,10 +30,10 @@ export const IntroBackgroundContainer = styled.div`
             /* "picture picture"; */
     }
     /* Change things when this component has the "project" prop attached */
-    ${props => props.project && css``}
+    ${(props) => props.project && css``}
 
     /* Change things when this component has the "article" prop attached */
-    ${props =>
+    ${(props) =>
       props.article &&
       css`
         grid-template-areas:
@@ -64,7 +64,7 @@ export const IntroTextH1 = styled.h1`
     font-size: 2.5em;
   }
 
-  ${props =>
+  ${(props) =>
     props.project &&
     css`
       font-size: 5em;
@@ -74,7 +74,7 @@ export const IntroTextH1 = styled.h1`
         font-size: 4em;
       }
     `}
-  ${props =>
+  ${(props) =>
     props.article &&
     css`
       font-size: 5em;
@@ -112,7 +112,7 @@ export const IntroTextH2 = styled.p`
     min-width: 200px;
   }
 
-  ${props =>
+  ${(props) =>
     props.project &&
     css`
       font-family: "Europa", Arial, Helvetica, sans-serif;
@@ -127,7 +127,7 @@ export const IntroTextH2 = styled.p`
       }
     `}
 
-  ${props =>
+  ${(props) =>
     props.article &&
     css`
       font-family: "Europa", Arial, Helvetica, sans-serif;
@@ -148,7 +148,7 @@ export const IntroTextH2 = styled.p`
 `;
 
 export const IntroPicture = styled.img.attrs({
-  src: props => props.imgsrc
+  src: (props) => props.imgsrc,
 })`
     grid-area: picture;
 
@@ -156,7 +156,7 @@ export const IntroPicture = styled.img.attrs({
     max-height: 370px;
     width: auto;
 
-    /* margin-top: ${props => props.margintop}; */
+    /* margin-top: ${(props) => props.margintop}; */
 
     /* margin-right: 0px; */
     margin-left: 50px;
@@ -164,7 +164,7 @@ export const IntroPicture = styled.img.attrs({
     /* background-color: red; */
 
     justify-self: end;
-    align-self: ${props => props.alignment};
+    align-self: ${(props) => props.alignment};
 
     @media (max-width: 700px) {
         /* max-width: 40%; */
@@ -173,12 +173,12 @@ export const IntroPicture = styled.img.attrs({
         height: auto;
         margin-top: 20px;
         margin-right: 50px;
-        margin-bottom: ${props => props.marginBottom};
-        justify-self: ${props => props.justifyMobile};
-        align-self: ${props => props.alignmentMobile};
+        margin-bottom: ${(props) => props.marginBottom};
+        justify-self: ${(props) => props.justifyMobile};
+        align-self: ${(props) => props.alignmentMobile};
     }
 
-    ${props =>
+    ${(props) =>
       props.project &&
       css`
         margin-right: 50px;
@@ -192,16 +192,21 @@ export const IntroPicture = styled.img.attrs({
       `}
 `;
 
-export default props => {
+export default (props) => {
   return (
     <IntroBackgroundContainer bgc={props.bgc}>
       <IntroPicture imgsrc={picture} alignment="end" />
 
       <IntroTextH1>Hey! {props.emoji} I'm Daniel.</IntroTextH1>
       <IntroTextH2>
-        I'm a writer and developer, and sometimes other things. All of my time
-        is currently spoken for, but feel free to reach out if you think I'd be
-        a good fit for something in the future.
+        I'm a writer and developer, and sometimes other things. But mostly those
+        things.
+        <br />
+        <br />
+        I'd love to hear from you! Feel free to reach out:{" "}
+        <a style={{ color: "#53B89D" }} href="mailto:dcj@hey.com">
+          dcj@hey.com
+        </a>
       </IntroTextH2>
     </IntroBackgroundContainer>
   );
