@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/li",
+      "destination": "https://linkedin.com/in/danielcolinjames",
+      "perman": false
+    },
+    {
+      "source": "/brave",
+      "destination": "https://brave.com/dcj083",
+      "permanent": false
+    }
+  ]
+}
