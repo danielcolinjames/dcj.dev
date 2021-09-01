@@ -6,6 +6,11 @@
       "permanent": false
     },
     {
+      "source": "/gss",
+      "destination": "https://docs.google.com/presentation/d/18gxyveEf96Mum4-8Y9wpfWyM1JmSo94Eu5nbe3WsFKc/edit?usp=sharing",
+      "permanent": false
+    },
+    {
       "source": "/brave",
       "destination": "https://brave.com/dcj083",
       "permanent": false
